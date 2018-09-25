@@ -1,18 +1,21 @@
 module.exports = function getZerosCount(number) {
   
   var divider = 5;
+  var piecesRaw = [];
   var pieces = [];
   
-  while (number / divider > 0) {
+  while (number / divider > 1) {
       
       fragment = number / divider;
       divider = divider * 5;
-      pieces.push(Math.round(fragment));
-      
+      piecesRaw.push(fragment);
+      pieces.push(Math.floor(fragment));
   
 }
 
-//console.log(pieces);
+console.log(piecesRaw);
+console.log(pieces);
+
 
 var sum = 0;
 for (var i = 0; i < pieces.length; i++) {
